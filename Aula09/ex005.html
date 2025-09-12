@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(90, 90, 196);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <script>
+        window.document.writeln("Olá, mundo!<br>")  // Escreveno body
+        //  Isso são formas de acessar os elementos da minha arvore DOM
+        window.document.writeln(window.document.charset + "<br>")   //  Escreve no body o tipo de letra, no caso pt-br temos o padrão UTF-8
+        window.document.writeln(window.navigator.appName+ "<br>")   //  Escreve o nome do aplicativo que está sendo rodado
+        var p1 = window.document.getElementsByTagName("p")[0] // Coloquei dentro da variavel a String que estava no paragrafo 0
+        p1.style.color = 'black' // Mudei a cor do paragrafo 0
+        window.document.write("Está escrito assim: " + p1.innerText) // imprimi o que estava no p1, que foi justamente o paragrafo 0 que eu selecionei mais cedo
+        
+    </script>
+</body>
+</html>
