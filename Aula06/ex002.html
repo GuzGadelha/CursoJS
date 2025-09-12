@@ -19,17 +19,8 @@
     <h1>Olá, mundo!</h1>
     <p>Já me livrei da maldição.</p>
     <script>
-        //  Entrada de valores em variaveis sem tipo especificado
-        var n1 = window.prompt("Digite um número")
-        var n2 = window.prompt("Digite outro número");
-        //  Calculo de variaveis sem tipo especifico, utilizando type cast para definir como int ou float
-        //  Poderia ser utilizado tambem apenas o "Number", ele reconheceria sozinho se o numero é int ou float
-        var s = Number.parseInt(n1) + Number.parseInt(n2);
-        var sf = Number.parseFloat(n1) + Number.parseFloat(n2);
-        //  Saída do resultado
-        window.alert("A soma inteira dos valores é " + s + 
-        "\nA soma em float é " + sf);
-
+        var nome = window.prompt("Qual o seu nome?");
+        window.alert("Prazer em te conhecer " + nome);
     </script>
 </body>
 </html>
