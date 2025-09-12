@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            font:normal 20px Arial;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(255, 252, 239);
+        }
+        div#divbotao{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input#botao{
+            background-color: red;
+            color: white;
+            margin: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font:bold 16px Arial;
+            cursor: pointer;
+        }
+        div#res{
+            background-color: rgb(193, 193, 193);
+            margin: 20px 100px;
+            padding: 15px; 
+            border-radius: 8px;
+        }
+        input#txtvel{
+            margin: 5px;
+            padding: 5px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Sistema de multas</h1>
+
+    <p>
+        Velocidade do carro:
+        <input type="number" nome="txtvel" id="txtvel">
+        Km/h
+    </p>
+    
+    <div id="divbotao">
+        <input type="button" value="Verificar" onclick="calcular()" id="botao">    
+    </div>
+    
+    <div id="res"></div>
+
+    <div id="aviso"></div>
+    
+    <script>
+        var txtv = (window.document.querySelector('input#txtvel')) // Primeiro pegamos o que está dentro do input    
+        var vel = Number.parseFloat(txtv.value) // Vai ser uma string então temos que transformar em Number
+        var res = window.document.querySelector('div#res') // Colocamos a div para o resultado em uma variavel
+        var aviso = window.document.querySelector('div#aviso')
+
+        function calcular(){    
+        res.innerHTML = `Sua velocidade é de ${Number(txtv.value)} Km/h` // Assim podemos mudar o valor de dentro da div, o que está escirto, por meio da variavel
+        colorir();
+        limite();
+        }
+        
+        function colorir(){
+            if (Number(txtv.value) > 60){
+                res.style.color = "red"
+                aviso.style.color = "red"
+            }else{
+                res.style.color = "green"
+                aviso.style.color = "green"
+            }
+        }
+
+        function limite(){
+            if(Number(txtv.value) > 60){
+                aviso.innerHTML = "Sua velocidade está muito alta!<br>MULTADO!"
+            } else{
+                aviso.innerHTML = "Continue dirigindo com cuidado!<br>Boa sorte!"
+            }
+        }
+
+    </script>
+</body>
+</html>
