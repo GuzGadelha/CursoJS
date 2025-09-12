@@ -19,17 +19,13 @@
     <h1>Olá, mundo!</h1>
     <p>Já me livrei da maldição.</p>
     <script>
-        //  Entrada de valores em variaveis sem tipo especificado
-        var n1 = window.prompt("Digite um número")
-        var n2 = window.prompt("Digite outro número");
-        //  Calculo de variaveis sem tipo especifico, utilizando type cast para definir como int ou float
-        //  Poderia ser utilizado tambem apenas o "Number", ele reconheceria sozinho se o numero é int ou float
-        var s = Number.parseInt(n1) + Number.parseInt(n2);
-        var sf = Number.parseFloat(n1) + Number.parseFloat(n2);
-        //  Saída do resultado
-        window.alert("A soma inteira dos valores é " + s + 
-        "\nA soma em float é " + sf);
-
+        //  Number serve para identificar uma variavel sem tipo como do tipo Number, 
+        //  reconhecendo automaticamente seja Float ou Int
+        //  Para fazer typeCast usamos "Number.parseInt" ou "Number.parseFloat" :)
+        var n1 = Number(window.prompt("Digite um número"))
+        var n2 = Number(window.prompt("Digite outro número"))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)//  Esse ${} é chamado de placeRouder, ele serve para facilitar a escrita de strings
     </script>
 </body>
 </html>
