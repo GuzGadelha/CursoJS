@@ -54,8 +54,6 @@
     </div>
     
     <div id="res"></div>
-
-    <div id="aviso"></div>
     
     <script>
         var txtv = (window.document.querySelector('input#txtvel')) // Primeiro pegamos o que está dentro do input    
@@ -72,18 +70,16 @@
         function colorir(){
             if (Number(txtv.value) > 60){
                 res.style.color = "red"
-                aviso.style.color = "red"
             }else{
                 res.style.color = "green"
-                aviso.style.color = "green"
             }
         }
 
         function limite(){
             if(Number(txtv.value) > 60){
-                aviso.innerHTML = "Sua velocidade está muito alta!<br>MULTADO!"
+                res.innerHTML += "<br>Sua velocidade está muito alta!<br>MULTADO!"
             } else{
-                aviso.innerHTML = "Continue dirigindo com cuidado!<br>Boa sorte!"
+                res.innerHTML += "<br>Continue dirigindo com cuidado!<br>Boa sorte!"
             }
         }
 
