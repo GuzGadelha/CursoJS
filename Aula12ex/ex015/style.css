@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 2px black;
+}
+
+footer{
+    font: italic bold 10pt Arial;
+    color: white;
+    text-align: center; /* CORRIGIDO AQUI */
+    font-style: italic;
+}
+
+
+img{ 
+    width: 250px;  
+    height: 250px;
+    border-radius: 50%;
+}
+ 
+
+
+input#button{
+    background-color: rgb(70, 142, 236);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font: normal 15pt consolas;
+    cursor: pointer;
+}
+
+input#button:hover{
+    background-color: rgb(36, 73, 121);
+}
