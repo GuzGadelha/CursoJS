@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contagem</title>
+    <title>Super contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Vamos contar!</h1>
     </header>
 
     <section>
         <div id="dados">
-            <p>Inicio: <input type="number" id="txtInic"></p>
-            <p>Fim: <input type="number" id="txtFim"></p>
-            <p>Passo: <input type="number" id="txtPasso"></p>
-            <input type="button" value="Contar"  onclick="contar()">
+            <p>Inicio: <input type="number" name="inicio" id="txtInic"></p>
+            <p>Fim: <input type="number" name="fim" id="txtFim"></p>
+            <p>Passo: <input type="number" name="passo" id="txtPasso"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
+
         <div id="res">
             resultado
         </div>
@@ -29,8 +30,7 @@
         <p>&copy; CursoEmVídeo</p>
     </footer>
 
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
